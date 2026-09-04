@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f4f8;
+  color: #1a1a1a;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+
+header {
+  background-color: #104878;
+  color: #ffffff;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+/* Conteúdo */
+
+main {
+  /* Espaço entre cabeçalho e rodapé */
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Área de pesquisa */
+
+.area-pesquisa {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.area-pesquisa label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#campoCidade {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #0b3d68;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Destaque quando o campo está selecionado */
+#campoCidade:focus {
+  outline: 3px solid #f2a71b;
+}
+
+/* Área de status  */
+
+
+.area-status {
+  font-size: 18px;
+}
+
+/* Mensagem simples de texto */
+.mensagem {
+  background-color: #ffffff;
+  border-left: 6px solid #0b3d68;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+/* Mensagem de erro fica com destaque vermelho */
+.mensagem-erro {
+  border-left-color: #b3261e;
+  color: #8c1d18;
+  font-weight: bold;
+}
+
+/* Título das listas (cidades encontradas / previsão) */
+.titulo-secao {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Lista de cidades encontradas  */
+
+.lista-cidades {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Cada cidade da lista é um botão */
+.item-cidade {
+  width: 100%;
+  font-family: inherit;
+  background-color: #ffffff;
+  border: 2px solid #c7d6e3;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: 18px;
+  /* O cursor de mãozinha avisa que dá para clicar */
+  cursor: pointer;
+  text-align: left;
+  color: #1a1a1a;
+}
+
+/* Destaque azul ao passar o mouse, indicando que é clicável */
+.item-cidade:hover {
+  background-color: #0b3d68;
+  border-color: #0b3d68;
+  color: #ffffff;
+}
+
+.item-cidade:focus {
+  outline: 3px solid #f2a71b;
+}
+
+/* Previsão do tempo */
+
+.lista-previsao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-previsao {
+  background-color: #ffffff;
+  border: 2px solid #c7d6e3;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.data-previsao {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0b3d68;
+  margin-bottom: 8px;
+}
+
+.linha-dado {
+  font-size: 17px;
+}
+
+.atualizado-em {
+  font-size: 15px;
+  color: #444444;
+  margin-bottom: 16px;
+}
+
+/*  Rodapé  */
+
+footer {
+  background-color: #0b3d68;
+  color: #cfe3f5;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+}
+
+/*  Telas pequenas  */
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 16px 12px;
+  }
+
+  .area-pesquisa label,
+  .item-cidade,
+  .area-status {
+    font-size: 16px;
+  }
+
+}
